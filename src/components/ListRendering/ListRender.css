@@ -1,0 +1,22 @@
+.studentDetails{
+    display:flex;
+    justify-content: center;
+    padding:20px;
+}
+.studentDetails ul{    
+    list-style-type: none;
+    border-bottom: 1px solid black;
+    padding: 0;
+    width: 50%;
+    background-color: tomato;
+    padding: 25px;
+    border-radius: 25px;
+    
+    
+}
+
+.studentList ul > li{
+    padding: 10px 0;
+    color: #fff;
+    font-size: 1rem;
+}

@@ -21,8 +21,8 @@ const ParentFunctionComponent = () => {
         console.log('function called', event)
         if (event.target.checked) {
             setSkills([...skills, event.target.value])
-        }else{
-            setSkills(skills.filter((item)=> item !== event.target.value))
+        } else {
+            setSkills(skills.filter((item) => item !== event.target.value))
         }
 
     }
@@ -47,8 +47,10 @@ const ParentFunctionComponent = () => {
                 <p>Selected Skill sets:{skills}</p>
 
             </fieldset>
-            <ChildFunctionComponent />
-        </div>
+            <ChildFunctionComponent role="React Developer">
+                <p>Children props</p>
+            </ChildFunctionComponent>
+           </div>
     )
 }
 

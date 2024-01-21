@@ -10,6 +10,7 @@ class ParentClassComponent extends Component {
 
         }
         this.handleClick = this.handleClick.bind(this);
+        this.inputRef = React.createRef();
     }
     handleClick() {
         this.setState(
@@ -19,10 +20,16 @@ class ParentClassComponent extends Component {
         )
     }
 
+    componentDidMount(){
+        console.log(this.inputRef);
+        this.inputRef.current.focus();
+    }
+
     render() {
         return (
             <div>
                 <h1>I am Parent class component!!!!!!!!!!!!{this.state.userName}</h1>
+                <input type="text" ref={this.inputRef}/>
                 <button onClick={this.handleClick} >To change the name</button>
                 <ChildClassComponent />
             </div>
