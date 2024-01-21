@@ -10,6 +10,9 @@ import NoPortalComponent from './components/ModelPortal/NoPortalComponent';
 import ModalComponent from './components/ModelPortal/ModalComponent';
 import ClickCounter from './components/HOC/ClickCounter';
 import HoverCounter from './components/HOC/HoverCount';
+import ClickCounterTwo from './components/Render/ClickCounterTwo';
+import HoverCounterTwo from './components/Render/HoverCounterTwo';
+import RenderCounter from './components/Render/RenderCounter';
 
 
 
@@ -23,10 +26,15 @@ function App() {
       {/* <LoginForm/>  */}
       {/* <ListRender/> */}
       {/* <PortalDemo/> */}
-     {/* <NoPortalComponent/> */}
-     {/* <ModalComponent/> */}
-     <ClickCounter name='jayashri'/>
-     <HoverCounter/>
+      {/* <NoPortalComponent/> */}
+      {/* <ModalComponent/> */}
+      {/* <ClickCounter name='jayashri'/>
+     <HoverCounter/> */}
+
+      {/* <ClickCounterTwo/>
+     <HoverCounterTwo/> */}
+      <RenderCounter render={(count, handleClick) => <ClickCounterTwo count={count} handleClick={handleClick}></ClickCounterTwo>} />
+      <RenderCounter render={(count, handleClick) => <HoverCounterTwo count={count} handleClick={handleClick}></HoverCounterTwo>} />
     </div>
   );
 }
