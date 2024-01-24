@@ -21,8 +21,12 @@ import UseEffectCount from './components/Hook/UseEffectCount';
 import ConditionalUseEffect from './components/Hook/ConditionalUseEffect';
 import HookMouse from './components/Hook/HookMouse';
 import EventUnMount from './components/Hook/EventUnMount';
+import DataFetching from './components/UseEffect/DataFetching';
+import DataFetchingWithId from './components/UseEffect/DataFetchingWithId';
+import ComponentA from './components/Context/ComponentA';
+import React, { createContext } from 'react'
 
-
+export const UserContext = createContext()
 
 
 function App() {
@@ -43,8 +47,8 @@ function App() {
      <HoverCounterTwo/> */}
       {/* <RenderCounter render={(count, handleClick) => <ClickCounterTwo count={count} handleClick={handleClick}></ClickCounterTwo>} />
       <RenderCounter render={(count, handleClick) => <HoverCounterTwo count={count} handleClick={handleClick}></HoverCounterTwo>} /> */}
-     
-     
+
+
       {/* <PostList/> */}
       {/* <FormPost/> */}
       {/* <HookCounter/> */}
@@ -52,7 +56,16 @@ function App() {
       {/* <UseEffectCount/> */}
       {/* <ConditionalUseEffect/> */}
       {/* <HookMouse/> */}
-      <EventUnMount/>
+      {/* <EventUnMount/> */}
+      {/* <DataFetching/> */}
+      {/* <DataFetchingWithId/> */}
+
+
+      <UserContext.Provider value={'jayashri'}>
+        <ComponentA />
+      </UserContext.Provider>
+
+
     </div>
   );
 }
