@@ -13,6 +13,10 @@ import HoverCounter from './components/HOC/HoverCount';
 import ClickCounterTwo from './components/Render/ClickCounterTwo';
 import HoverCounterTwo from './components/Render/HoverCounterTwo';
 import RenderCounter from './components/Render/RenderCounter';
+import PostList from './components/HTTPCall/PostList';
+import FormPost from './components/HTTPCall/FormPost';
+import HookCounter from './components/Hook/HookCounter';
+import HookCounterArray from './components/Hook/HookCounterArray';
 
 
 
@@ -33,8 +37,14 @@ function App() {
 
       {/* <ClickCounterTwo/>
      <HoverCounterTwo/> */}
-      <RenderCounter render={(count, handleClick) => <ClickCounterTwo count={count} handleClick={handleClick}></ClickCounterTwo>} />
-      <RenderCounter render={(count, handleClick) => <HoverCounterTwo count={count} handleClick={handleClick}></HoverCounterTwo>} />
+      {/* <RenderCounter render={(count, handleClick) => <ClickCounterTwo count={count} handleClick={handleClick}></ClickCounterTwo>} />
+      <RenderCounter render={(count, handleClick) => <HoverCounterTwo count={count} handleClick={handleClick}></HoverCounterTwo>} /> */}
+     
+     
+      {/* <PostList/> */}
+      {/* <FormPost/> */}
+      {/* <HookCounter/> */}
+      <HookCounterArray/>
     </div>
   );
 }
