@@ -17,6 +17,10 @@ import PostList from './components/HTTPCall/PostList';
 import FormPost from './components/HTTPCall/FormPost';
 import HookCounter from './components/Hook/HookCounter';
 import HookCounterArray from './components/Hook/HookCounterArray';
+import UseEffectCount from './components/Hook/UseEffectCount';
+import ConditionalUseEffect from './components/Hook/ConditionalUseEffect';
+import HookMouse from './components/Hook/HookMouse';
+import EventUnMount from './components/Hook/EventUnMount';
 
 
 
@@ -44,7 +48,11 @@ function App() {
       {/* <PostList/> */}
       {/* <FormPost/> */}
       {/* <HookCounter/> */}
-      <HookCounterArray/>
+      {/* <HookCounterArray/> */}
+      {/* <UseEffectCount/> */}
+      {/* <ConditionalUseEffect/> */}
+      {/* <HookMouse/> */}
+      <EventUnMount/>
     </div>
   );
 }
