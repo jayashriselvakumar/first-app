@@ -24,12 +24,33 @@ import EventUnMount from './components/Hook/EventUnMount';
 import DataFetching from './components/UseEffect/DataFetching';
 import DataFetchingWithId from './components/UseEffect/DataFetchingWithId';
 import ComponentA from './components/Context/ComponentA';
-import React, { createContext } from 'react'
+import React, { createContext, useReducer } from 'react'
+import FetchNameList from './components/UseEffect/FetchNameList';
+import CounterReducer from './components/Reducer/CounterReducer';
+import CounterReducerObject from './components/Reducer/CounterReducerObject';
+import MultipleUseReducer from './components/Reducer/MultipleUseReducer';
+import UseContextWithReducerA from './components/Reducer/UseContextWithReducerA';
 
 export const UserContext = createContext()
+export const ChannelContext = createContext()
+export const CountContext = createContext()
 
+const InitialState = 0
+const reducer = (state, action) => {
+  switch (action) {
+    case 'increment':
+      return state + 1
+    case 'decrement':
+      return state - 1
+    case 'reset':
+      return InitialState
+    default:
+      return state
+  }
+}
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, InitialState)
   return (
     <div className="App">
       {/* <ParentClassComponent />
@@ -61,9 +82,22 @@ function App() {
       {/* <DataFetchingWithId/> */}
 
 
-      <UserContext.Provider value={'jayashri'}>
+      {/* <UserContext.Provider value={'jayashri'}>
+        <ChannelContext.Provider value={'React'}>
         <ComponentA />
-      </UserContext.Provider>
+        </ChannelContext.Provider>
+      </UserContext.Provider> */}
+
+      {/* <FetchNameList/> */}
+
+      {/* <CounterReducer/> */}
+      {/* <CounterReducerObject/> */}
+      {/* <MultipleUseReducer/> */}
+
+      <CountContext.Provider value={{countState:count,countDispatch:dispatch}}>
+        <div>Count:{count}</div>
+        <UseContextWithReducerA />
+      </CountContext.Provider>
 
 
     </div>
